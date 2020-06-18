@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from .models import secondary
+
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    a = secondary.objects.all()
+    param = {'qurstion': a}
+    return render(request, 'index.html', param)
