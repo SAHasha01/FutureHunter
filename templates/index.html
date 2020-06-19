@@ -6,26 +6,102 @@
     <div class="container mt-3">
         <form method="get">
             {% csrf_token %}
-            {% for x in qurstion %}
             <div class="input-group my-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">{{ x.id }}</span>
+                    <span class="input-group-text">1</span>
                 </div>
                 <label type="text" class="form-control" aria-label="Text input with dropdown button">
-                    {{ x.question }}
+                    what is your best subject?
                 </label>
                 <div class="input-group-append">
-                    <select name="ans" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref">
+                    <select name="subject" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref"required>
                         <option value="">Choose...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="math">Math</option>
+                        <option value="history">History</option>
+                        <option value="Math&physics">Math & Physics</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group my-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">2</span>
+                </div>
+                <label type="text" class="form-control" aria-label="Text input with dropdown button">
+                    How much time do you spend reading each day?
+                </label>
+                <div class="input-group-append">
+                    <select name="hour" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref"required>
+                        <option value="">Choose...</option>
+                        <option value="3">3 hour</option>
+                        <option value="5">5 hour</option>
+                        <option value="8">8 hour</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group my-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">3</span>
+                </div>
+                <label type="text" class="form-control" aria-label="Text input with dropdown button">
+                    In which subject did you get higher marks?
+                </label>
+                <div class="input-group-append">
+                    <select name="gpa" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref"required>
+                        <option value="">Choose...</option>
+                        <option value="3">2-3 GPA</option>
+                        <option value="4">3-4 GPA</option>
+                        <option value="5">4-5 GPA</option>
+
                     </select>
 
                 </div>
             </div>
-            {% endfor %}
-        <input type="submit">
 
+            <div class="input-group my-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">4</span>
+                </div>
+                <label type="text" class="form-control" aria-label="Text input with dropdown button">
+                    what is your virtue?
+                </label>
+                <div class="input-group-append">
+                    <select name="virtue" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref" required>
+                        <option value="">Choose...</option>
+                        <option value="patience">Patience</option>
+                        <option value="inventor">Inventor</option>
+                        <option value="coolmindset">Cool mindset</option>
+                        <option value="thinklogically">Think logically</option>
+                        <option value="imagination">Imagination</option>
+                        <option value="criticalmind">Critical mind</option>
+                        <option value="Notintrovert">Not introvert</option>
+                        <option value="enthusiastic">Enthusiastic</option>
+                        <option value="initiative">May take initiative</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group my-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">5</span>
+                </div>
+                <label type="text" class="form-control" aria-label="Text input with dropdown button">
+                    What is your interested in?
+                </label>
+                <div class="input-group-append">
+                    <select name="interested" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref"required>
+                        <option value="">Choose...</option>
+                        <option value="Invention">Invention</option>
+                        <option value="No">Innovative idea</option>
+                        <option value="No">Learn about science</option>
+                        <option value="No">To be an entrepreneur</option>
+                        <option value="No">To read/write literature</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+            <input type="submit">
         </form>
     </div>
 {% endblock %}
