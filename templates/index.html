@@ -52,12 +52,9 @@
                         <option value="3">2-3 GPA</option>
                         <option value="4">3-4 GPA</option>
                         <option value="5">4-5 GPA</option>
-
                     </select>
-
                 </div>
             </div>
-
             <div class="input-group my-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text">4</span>
@@ -74,7 +71,7 @@
                         <option value="thinklogically">Think logically</option>
                         <option value="imagination">Imagination</option>
                         <option value="criticalmind">Critical mind</option>
-                        <option value="Notintrovert">Not introvert</option>
+                        <option value="notintrovert">Not introvert</option>
                         <option value="enthusiastic">Enthusiastic</option>
                         <option value="initiative">May take initiative</option>
                     </select>
@@ -90,11 +87,11 @@
                 <div class="input-group-append">
                     <select name="interested" class="custom-select mx-sm-2" id="inlineFormCustomSelectPref"required>
                         <option value="">Choose...</option>
-                        <option value="Invention">Invention</option>
-                        <option value="No">Innovative idea</option>
-                        <option value="No">Learn about science</option>
-                        <option value="No">To be an entrepreneur</option>
-                        <option value="No">To read/write literature</option>
+                        <option value="invention">Invention</option>
+                        <option value="innovative">Innovative idea</option>
+                        <option value="learnscience">Learn about science</option>
+                        <option value="entrepreneur">To be an entrepreneur</option>
+                        <option value="literature">To read/write literature</option>
                     </select>
 
                 </div>
@@ -104,4 +101,11 @@
             <input type="submit">
         </form>
     </div>
+
+
+    <div class="container text-center mt-4">
+        <h1>{{ department }}</h1>
+    </div>
+
+
 {% endblock %}
